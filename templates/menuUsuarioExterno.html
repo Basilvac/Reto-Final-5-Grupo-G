@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Funciones administrador</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo_seleccion.css')}}">
+  </head>
+  <body>
+    <div align="center"><img src="{{ url_for('static', filename='img/logo.jpeg')}}" height="100" width="200"
+
+        align="middle"></div>
+    <h1>!Hola querido Usuario! </h1>
+      <h1> ¿Qué quieres hacer hoy? </h1>
+    <form name="fFuncionesAdmin" method="POST" action="">
+      <div class="fila"> <input name="radio" value="Buscar Productos" required="" type="radio">
+        Buscar Productos </div>
+        <div class="fila"> <input name="radio" value="Cambiar clave" required="" type="radio">
+        Cambiar clave </div>
+      <div class="fila"> <input class="boton" name="sb" id="btnIngresar"
+
+value="Ingresar" title="Clic para buscar" type="submit" onsubmit="">&nbsp;&nbsp;
+      <input class="boton" name="sb" id="btnRegresar" value="Regresar" title="Clic para regresar"
+      type="button" onClick="history.go(-1);"> </div>
+    </form>
+  </body>
+</html>

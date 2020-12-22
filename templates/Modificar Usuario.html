@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Página de muestra para conceptos básicos del HTML">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="NATC - OCDT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Usuario</title>
+
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo1.css')}}">
+  </head>
+  <body>
+    <div align="center"><img src="../static/img/logo.jpeg" height="100" width="200" border="0"
+
+        align="middle"></div>
+    <h1>Modificar usuario</h1>
+    <form name="formRegistro" method="post" action="/modificarUsuario/{{usuario.0}}">
+      <div class="areatrabajo">
+        <div class="fila">
+          <div class="s2">Nombre</div>
+          <div class="s4"> <input name="txtNombre" id="txtNombre" value="{{usuario.1}}" required=""
+
+              placeholder="Digite el nombre" type="text"> </div>
+        </div>
+        <br>
+        <div class="fila">
+          <div class="s2">Identificación</div>
+          <div class="s4"> <input name="txtID" id="txtID" value="{{usuario.0}}" required=""
+
+              placeholder="Digite la identificación" type="text"> </div>
+        </div>
+        <br>
+        <div class="fila">
+          <div class="s2">Usuario</div>
+          <div class="s4"> <input name="txtLog" id="txtLog" value="{{usuario.2}}" required=""
+
+              placeholder="Digite login" type="text"> </div>
+        </div>
+        <br>
+        <div class="fila">
+          <div class="s2">Correo</div>
+          <div class="s4"> <input name="txtCorreo" id="txtCorreo" value="{{usuario.3}}" required=""
+
+              placeholder="Digite el correo" type="text"> </div>
+        </div>
+        <br>
+        <div class="fila">
+          <div class="s2">Asigne Clave</div>
+          <div class="s4"> <input name="txtCla" id="txtCla" value="{{usuario.4}}" required=""
+
+              placeholder="Digite clave" type="password"> </div>
+        </div>
+        <br>
+        <div class="fila">
+          <div class="s2">Verifique Clave</div>
+          <div class="s4"> <input name="txtVerCla" id="txtVerCla" value="{{usuario.4}}" required=""
+
+              placeholder="Digite clave nuevamente" type="password"> </div>
+        </div>
+        <br>
+        <div class="fila">
+          <div class="s2">Administrador</div>
+          <div class="s4"> <select name="check" id="check">
+            <option value="no">No</option>
+            <option value="si">Si</option>
+          </select></div>
+        </div>
+        <br>
+        <br>
+      </div>
+      <div class="fila"> <input class="boton" name="sb" id="sb"
+value="Actualizar" title="Clic para actualizar" type="submit">&nbsp;&nbsp;<input
+
+class="boton" name="btnLimpiar" id="btnLimpiar" value="Limpiar campos" title="Clic para regresar"
+
+type="boton"> &nbsp;&nbsp;<input class="boton" name="btn" id="btnRegresar"
+
+value="Regresar" title="Clic para regresar" type="button" onClick="history.go(-1);"></div>
+    </form>
+  </body>
+</html>

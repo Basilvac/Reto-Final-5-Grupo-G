@@ -1,0 +1,21 @@
+{% extends "buscarProductoAdministrador.html" %}
+{% block contenido %}
+<div class='formulario'>
+    <div class='titulo'>Buscar Producto</div>
+    <div class="'area">
+        <div class='izquierda'>
+            <div class='fila'>
+                <div class='c2'>{{ form.nombreProducto }}</div>
+                <div>{{ form.nombreProducto(size=20) }}</div>
+            </div>
+
+            <div class='fila'>
+                <div class='c2'>&nbsp;</div>
+                <div>{{ form.enviar() }}</div>
+
+            </div>
+        </div>
+        <div class='derecha'></div>
+    </div>
+</div>
+{% endblock %}

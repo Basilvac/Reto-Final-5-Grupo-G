@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Opciones Producto</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo_seleccion.css')}}">
+  </head>
+  <body>
+    <div align="center"><img src="{{ url_for('static', filename='img/logo.jpeg')}}" height="100" width="200"
+
+        align="middle"></div>
+    <h1>Opciones producto</h1>
+    <form name="fOpcionesPrdUsr" method="POST" action="">
+      <div class="fila"> <input checked="checked" name="radio" value="registrar" required="" type="radio">
+        Registrar producto </div>
+      <div class="fila"> <input name="radio" value="buscar" required="" type="radio"> Buscar
+        producto</div>
+         <div class="fila"> <input name="radio" value="buscar" required="" type="radio"> Modificar
+        producto</div>
+      <div class="fila"> <input class="boton" name="sb" id="btnIngresar"
+
+      value="Ingresar" title="Clic para ingresar" type="submit" onsubmit="">&nbsp;&nbsp;
+      
+      <input class="boton" name="sb" id="btnRegresar" value="Regresar" title="Clic para regresar"
+
+      type="button" onClick="history.go(-1);"> </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Página de muestra para conceptos básicos del HTML">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="NATC - OCDT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Clave Usuario Registrado</title>
+
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo.css')}}">
+  </head>
+  <body>
+    <div align="center"> <img src="../static/img/logo.jpeg"
+
+        height="100" width="200"></div>
+    <br>
+    <h1>Cambio de Clave del Usuario para ingresar al Sistema de la Cafetería</h1>
+    <br>
+    <form name="formRegistro" method="post" action="">
+      <div class="areatrabajo">
+        <div class="fila">
+          <div class="s2">Clave Actual</div>
+          <div class="s4"> <input name="claveactual" id="claveactual" value=""
+
+              required="" placeholder="Digite clave Actual" type="password"> </div>
+        </div>
+        <div class="fila">
+          <div class="s2">Clave Nueva</div>
+          <div class="s4"> <input name="clavenueva" id="clavenueva" value="" required=""
+
+              placeholder="Digite clave nueva" type="password"> </div>
+        </div>
+        <div class="fila">
+          <div class="s2">Digítela nuevamente para verificación</div>
+          <div class="s4"> <input name="verificacion" id="verificacion" value=""
+
+              required="" placeholder="Digítela nuevamente" type="password"> </div>
+        </div>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="fila"> <input class="boton" name="btnCambiar" id="btnCambiar"
+
+value="Cambiar Clave" title="Clic para cambiar clave" type="submit">&nbsp;&nbsp;
+      </div>
+    </form>
+  </body>
+</html>

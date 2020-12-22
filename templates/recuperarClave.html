@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Página de muestra para conceptos básicos del HTML">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="NATC - OCDT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Clave</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo.css')}}">
+  </head>
+  <body>
+    <header>
+      <h1><br>
+      </h1>
+      <img src="../static/img/logo.jpeg" title="Logo" style="width: 133px; height: 79px; margin-left: 61px;">
+      <h1>Recuperar Clave</h1>
+      <a href="#"></a> </header>
+    <article>
+      <section>
+        <form name="formulario" method="post" class="main" action="">
+
+          <div class="areatrabajo">
+            <div class="fila">
+              <div class="s2">Correo Electrónico</div>
+              <div class="s4"> <input name="email" id="email" value="" placeholder="Digite el correo electrónico"
+
+                  type="email"> </div>
+              <br>
+              <div class="fila"><br>
+                <small id="emailHelp" class="form-text text-muted">Se enviará un
+                  código de recuperación a su correo</small>
+                <div class="fila"> <br>
+
+                            <div class="s4">
+                      <input class="boton" name="sb" id="Recuperar Clave"
+                             value="Ingresar" title="Recuperar Clave" type="submit" onsubmit="">&nbsp;&nbsp;
+
+                      <input class="boton" name="sb" id="btnRegresar" value="Regresar" title="Clic para regresar"
+                        type="button" onClick="history.go(-1);">
+
+                  </div>
+                </div>
+                <div class="fila"><br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </article>
+  </body>
+</html>

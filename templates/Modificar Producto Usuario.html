@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Página de muestra para conceptos básicos del HTML">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="NATC - OCDT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Producto</title>
+
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo1.css')}}">
+      <script src="{{url_for('static',filename='js/cargarImg.js')}}"></script>
+    </head>
+  <body>
+    <div align="center"><img src="../static/img/logo.jpeg" height="100" width="200" border="0"
+
+        align="middle"></div>
+    <h1>Modificar Producto</h1>
+    <form name="formRegistro" method="post" action="/modificarProductoUsuario/{{producto.0}}">
+      <div class="areatrabajo">
+          <div class="fila">
+          <div class="s2">ID:</div>
+          <div class="s4"> <input name="txtID" id="txtID" value="{{producto.0}}" required=""
+
+              placeholder="Digite la identificación" type="text"> </div>
+        </div>
+        <br>
+        <div class="fila">
+          <div class="s2">Nombre</div>
+          <div class="s4"> <input name="txtNombre" id="txtNombre" value="{{producto.1}}" required=""
+
+              placeholder="Digite el nombre" type="text"> </div>
+        </div>
+        <br>
+
+        <br>
+        <div class="fila">
+          <div class="s2">Cantidad de Unidades:</div>
+          <div class="s4"> <input name="cantidadProducto" id="cantidadProducto" value="{{producto.2}}" required=""
+
+              placeholder="Digite las unidades" type="text"> </div>
+        </div>
+        <br>
+        <br>
+        <div class="fila">
+          <div class="s2">Verifique la Cantidad:</div>
+          <div class="s4"> <input name="VerificarCantidad" id="VerificarCantidad" value="{{producto.2}}" required=""
+
+              placeholder="Digite las unidades" type="text"> </div>
+        </div>
+        <br>
+        <div class="fila">
+          <div class="s2">Descripcion</div>
+          <div class="s4"> <input name="descripcionProducto" id="descripcionProducto" value="{{producto.3}}" required=""
+
+              placeholder="Digite una breve descripción" type="text"> </div>
+        </div>
+        <br>
+        <div class="fila">
+          <div class="s2">Imagen:</div>
+          <div class="s4"> <img src="{{ url_for('static', filename='img/'+ producto.4 )}}" height="100" width="200"
+            > </div>
+        </div>
+        <br>
+
+        <br>
+      </div>
+        <br>
+        <br>
+        <div class="fila">
+          <div class="s2"><strong>Imagen:</strong></div>
+          <div class="s4"> <input name="ImagenProducto" id="ImagenProducto"
+
+              value="" type="file"> </div>
+
+        </div>  
+        <br>
+        <br>
+
+      <div class="fila"> 
+        <input class="boton" name="sb" id="btnActualizar"
+value="Actualizar" title="Clic para actualizar" type="submit">&nbsp;&nbsp;<input
+
+class="boton" name="btnLimpiar" id="btnLimpiar" value="Limpiar campos" title="Clic para regresar"
+
+type="boton"> &nbsp;&nbsp;<input class="boton" name="btn" id="btnRegresar"
+
+value="Regresar" title="Clic para regresar" type="button" onClick="history.go(-1);"></div>
+    </form>
+  </body>
+</html>

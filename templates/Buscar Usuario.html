@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buscar usuario</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo_busqueda.css')}}">
+  </head>
+  <body>
+    <div align="center"><img src="{{ url_for('static', filename='img/logo.jpeg')}}" height="100" width="200"
+      align="middle"></div>
+    <h1>Buscar usuario</h1>
+    <form  name="fBuscarUsr" method="POST" action="/mostrarUsuario"> <label class="container">Nombre <input checked="checked" name="radio" required=""
+
+          type="radio" value="nombre"> <span class="checkmark"></span> </label> <label class="container">Usuario
+        <input name="radio" required="" type="radio" value="usuario"> <span class="checkmark">
+        </span> </label> <label class="container">Número de identificación <input
+
+          name="radio" required="" type="radio" value="id"> <span class="checkmark"></span>
+      </label> <label class="container" required="">Correo <input name="radio"
+
+          required="" type="radio" value="correo"> <span class="checkmark"></span></label>
+      <div class="fila">
+        <div class="s4"> <input name="texto" id="texto" value="" placeholder="Digite el dato de búsqueda"
+
+            type="text"> </div>
+        <div class="s2"><input class="boton" name="btnEnviar" id="btnEnviar" value="Buscar"
+
+title="Clic para buscar" type="submit"></div>
+      </div>
+    </form>
+    <p>Resultados de la búsqueda:</p>
+      <table>
+        <thead>
+            <tr>
+                <td>Identificación</td>
+                <td>Nombre</td>
+                <td>Usuario</td>
+                <td>Correo</td>
+                <td>Administrador</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+                <tr>
+                    <td>{{ usuario.0 }}&nbsp;&nbsp;</td>
+                    <td>{{ usuario.1 }}&nbsp;&nbsp;</td>
+                    <td>{{ usuario.2 }}&nbsp;&nbsp;</td>
+                    <td>{{ usuario.3 }}&nbsp;&nbsp;</td>
+                    <td>{{ usuario.5 }}&nbsp;&nbsp;</td>
+                    <td>
+                        <a href="/editar/{{usuario.0}}">Editar</a>
+                        <a href="/eliminarUsuario/{{usuario.0}}">Eliminar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+      <br>
+      <div class="s2">&nbsp;<input class="boton" name="btn" id="btnRegresar"
+
+value="Regresar" title="Clic para regresar" type="button" onClick="history.go(-1);"></div>
+      <p><br>
+      </p>
+      <p><br>
+      </p>
+      <p><br>
+      </p>
+      <p><br>
+      </p>
+      <br>
+      <p><br>
+      </p>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Página de muestra para conceptos básicos del HTML">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="NATC - OCDT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Usuario</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo_seleccion.css')}}">
+    <script src="{{url_for('static',filename='js/validacion.js')}}"></script>
+  </head>
+  <body>
+    <div align="center">
+        <img src="{{ url_for('static', filename='img/logo.jpeg')}}" height="100" width="200"
+          align="middle" alt=""></div>
+    <br>
+    <br>
+    <h1>Inicio de Sesión al Sistema de Gestión de La Cafetería</h1>
+    <br>
+    <form name="formRegistro" id="formRegistro" method="post" action="/" onSubmit="return validar_formulario_Inicio();">
+      <div class="areatrabajo">
+        <div class="fila">
+          <div class="s2">Id de Usuario</div>
+          <div class="s4"> <input name="txtNombre" id="txtNombre" value="" required=""
+
+              placeholder="Digite Usuario" type="text"> </div>
+        </div>
+        <br>
+        <div class="fila">
+          <div class="s2">Clave de Usuario</div>
+          <div class="s4"> <input name="txtCla" id="txtCla" value="" required=""
+
+              placeholder="Digite clave" type="password"> </div>
+
+         </div>
+        <br>
+        <div class="fila">
+          <div class="s2">¿Es Administrador?</div>
+              <div class="s4"> <input checked="checked" name="radio" id="Si" value="Si" required="" type="radio">
+                Si </div>
+                <div class="s4"> <input name="radio" id="No" value="No" required="" type="radio"> No </div>
+        </div>
+        <br>
+        <br>
+      </div>
+      <div class="fila"> <input class="boton" name="sb" id="btnEntrar" value="Entrar al Sistema"
+                                title="Clic para entrar" type="submit" onsubmit="validar_formulario_Inicio()">&nbsp;&nbsp; </div>
+      <div class="fila"> Si necesita recuperar su clave haga click acá <input class="boton" name="sb" id="Recuperar Clave" value="Recuperar Clave"
+                                                                              title="Clic para recuperar" type="submit">&nbsp;&nbsp; </div>
+    </form>
+  </body>
+</html>
